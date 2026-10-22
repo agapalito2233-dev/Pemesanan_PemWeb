@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pemesanan Makanan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <img src="makanan.svg" alt="Ilustrasi makanan" class="banner">
+    <h1>Pemesanan Makanan</h1>
+
+    <p class="sub">Menu tersedia:</p>
+    <ul class="menu-list">
+      <li>Nasi Goreng: Rp15.000</li>
+      <li>Mie Ayam: Rp12.000</li>
+    </ul>
+
+    <table class="harga">
+      <thead>
+        <tr><th>No</th><th>Menu</th><th>Harga</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Nasi Goreng</td><td>Rp15.000</td></tr>
+        <tr><td>2</td><td>Mie Ayam</td><td>Rp12.000</td></tr>
+      </tbody>
+    </table>
+
+    <p class="info">Info makanan: <a href="https://id.wikipedia.org/wiki/Makanan_Indonesia" target="_blank" rel="noopener">Pelajari makanan Indonesia</a></p>
+
+    <form id="formPesan" action="proses.php" method="POST" novalidate>
+      <label for="nama">Nama:</label>
+      <input type="text" id="nama" name="nama">
+      <span class="error" id="errNama"></span>
+
+      <label for="menu">Menu:</label>
+      <select id="menu" name="menu">
+        <option value="">Pilih Menu</option>
+        <option value="Nasi Goreng">Nasi Goreng</option>
+        <option value="Mie Ayam">Mie Ayam</option>
+      </select>
+      <span class="error" id="errMenu"></span>
+
+      <label for="jumlah">Jumlah:</label>
+      <input type="number" id="jumlah" name="jumlah" min="1">
+      <span class="error" id="errJumlah"></span>
+
+      <button type="submit">Pesan</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
